@@ -1,0 +1,19 @@
+<mapper namespace="com.lagou.dao.IUserDao">
+
+    <select id="findAll" resultType="com.lagou.pojo.User" >
+        select * from user
+    </select>
+
+    <insert id="addUser" paramterType="com.lagou.pojo.User">
+        insert user value(#{id},#{username})
+    </insert>
+    <update id="updateUser" paramterType="com.lagou.pojo.User">
+        update user set username=#{username} where id=#{id}
+    </update>
+    <delete id="deleteUser" paramterType="com.lagou.pojo.User">
+
+        delete from user where id=#{id}
+    </delete>
+</mapper>
+
+
